@@ -115,7 +115,7 @@ int listarTrabajo(eTrabajo *lista, int tamTra, eMascota *listaM, int tamM, eColo
 	{
 		system("cls");
 		printf(" \n\n ***   Listado de Trabajos  ***\n\n");
-		printf("%-4s %-15s %-15s %-9s \n", "ID", "Nombre", "Servicio", "Fecha");
+		printf("%-4s %-15s %-15s  %-9s \n", "ID", "Nombre", "Servicio", "Fecha");
 		printf("-------------------------------------------------------------\n");
 		for (int i = 0; i < tamTra; i++)
 		{

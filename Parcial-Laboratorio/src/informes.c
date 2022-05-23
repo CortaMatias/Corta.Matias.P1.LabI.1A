@@ -168,7 +168,7 @@ int mostrarMascotaJoven(eMascota *lista, int tamM, eTipo *listaT, int tamT,
 				system("cls");
 				printf(" \n\n       ***   Listado de Mascotas  ***\n\n");
 				printf("%-4s  %-15s %-8s %-8s %-3s  %-7s  %-15s\n", "ID", "NOMBRE", "TIPO", "COLOR", "EDAD", "VACUNAS", "DUEÑO");
-				printf("-----------------------------------------------------------------\n");
+				printf("---------------------------------------------------------------------------\n");
 
 			for (int j = 0; j < tamM; j++) {
 				if (!lista[j].isEmpty && edadMinimo == lista[j].edad) {
@@ -339,7 +339,7 @@ int colorDeMascotaTop(eMascota *lista, int tamM, eColor *listaC, int tamC) {
 		}
 
 
-		printf("\nEl o los colores mas elegidos se eligieron %d veces y fueron:  ", contadorMaximo);
+		printf("\nEl o los colores mas elegidos se eligieron %d veces y fueron:  \n", contadorMaximo);
 		for (int i = 0; i < 5; i++){
 		if(contadorMaximo == contador[i]){
 			cargarDescripcionColor(listaC, tamC, i+5000, color );

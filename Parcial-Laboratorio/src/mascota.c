@@ -91,7 +91,7 @@ int mostrarMascota(eMascota *lista, eColor *listaC, int tamC, eTipo *listaT, int
 		cargarDescripcionColor(listaC, tamC, lista->idColor, Color);
 		cargarDescripcionTipo(listaT, tamT, lista->idTipo, Tipo);
 
-		printf(" %-4d %-15s %-8s %-8s %-3d    %-7c  %-15s\n", lista->id, lista->nombre, Tipo, Color, lista->edad, lista->vacunado, lista->cliente.nombre);
+		printf(" %-4d %-15s %-8s %-8s  %-3d    %-7c  %-15s\n", lista->id, lista->nombre, Tipo, Color, lista->edad, lista->vacunado, lista->cliente.nombre);
 		todoOk = 1;
 	}
 	return todoOk;
@@ -105,7 +105,7 @@ int listarMascota(eMascota *lista, int tamM, eColor *listaC, int tamC, eTipo *li
 	{
 		system("cls");
 		printf(" \n\n       ***   Listado de Mascotas  ***\n\n");
-		printf("%-4s  %-15s %-8s %-8s %-3s  %-7s  %-15s\n", "ID", "NOMBRE", "TIPO", "COLOR", "EDAD", "VACUNAS", "DUEÑO");
+		printf("%-4s  %-15s %-8s %-8s %-3s  %-7s    %-15s\n", "ID", "NOMBRE", "TIPO", "COLOR", "EDAD", "VACUNAS", "DUEÑO");
 		printf("-------------------------------------------------------------------------------------\n");
 		for (int i = 0; i < tamM; i++)
 		{
