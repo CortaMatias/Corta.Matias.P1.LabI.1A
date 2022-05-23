@@ -202,35 +202,36 @@ int validarInt(char *menInicio, char *menError, int *number, int min, int max)
 }
 
 /*len include \0*/
-int validarAlfaNumerico(char* menInicio, char* menError, char* texto, int len){
-	    int todoOk = 0;
-	    char auxTexto[100];
+int validarAlfaNumerico(char *menInicio, char *menError, char *texto, int len)
+{
+    int todoOk = 0;
+    char auxTexto[100];
 
-	    if (menInicio != NULL && menError != NULL && texto != NULL)
-	    {
+    if (menInicio != NULL && menError != NULL && texto != NULL)
+    {
 
-	        printf("%s", menInicio);
-	        fflush(stdin);
-	        fgets(auxTexto, 99, stdin);
-	        limpiarBarraN(auxTexto);
-	        if (strlen(auxTexto) == len -1)
-	        {
-	            todoOk = 1;
-	        }
-	        else
-	        {
-	            todoOk = 0;
-	        }
-	        while (!todoOk)
-	        {
-	            todoOk = validarAlfaNumerico(menError, menError, auxTexto, len);
-	        }
-	        strcpy(texto, auxTexto);
-	    }
-	    return todoOk;
+        printf("%s", menInicio);
+        fflush(stdin);
+        fgets(auxTexto, 99, stdin);
+        limpiarBarraN(auxTexto);
+        if (strlen(auxTexto) == len - 1)
+        {
+            todoOk = 1;
+        }
+        else
+        {
+            todoOk = 0;
+        }
+        while (!todoOk)
+        {
+            todoOk = validarAlfaNumerico(menError, menError, auxTexto, len);
+        }
+        strcpy(texto, auxTexto);
+    }
+    return todoOk;
 }
 
-int limpiarBarraN(char* vec)
+int limpiarBarraN(char *vec)
 {
     int todoOk = 0;
     if (vec != NULL)
@@ -248,60 +249,58 @@ int limpiarBarraN(char* vec)
     return todoOk;
 }
 
-
 int ordenarStrings(char *array)
 {
     int todoOk = 0;
 
     if (array != NULL)
     {
-    	for(int i = 0; i < 99; i++){
-    	if(!strcmp(array+i,"\0")){
-    		break;
-    	}else{
-    		array[i] = tolower(array[i]);
-    	}
+        for (int i = 0; i < 99; i++)
+        {
+            if (!strcmp(array + i, "\0"))
+            {
+                break;
+            }
+            else
+            {
+                array[i] = tolower(array[i]);
+            }
+        }
 
-    }
-
-        array[0]=toupper(array[0]);
+        array[0] = toupper(array[0]);
         todoOk = 1;
     }
-return todoOk;
+    return todoOk;
 }
 
-
-void validarFecha(int* dia, int* mes, int* anio)
+void validarFecha(int *dia, int *mes, int *anio)
 {
-    validarInt("Ingresar mes : \n","Error ingresar mes valido. \n",mes, 0,12 );
+    validarInt("Ingresar mes : \n", "Error ingresar mes valido. \n", mes, 0, 12);
 
-        switch (*mes)
-        {
-            case  1 :
-            case  3 :
-            case  5 :
-            case  7 :
-            case  8 :
-            case 10 :
-            case 12 :
-                validarInt("Ingresar dia : \n", "Error ingresar dia valido. \n", dia, 0, 31);
-                break;
+    switch (*mes)
+    {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        validarInt("Ingresar dia : \n", "Error ingresar dia valido. \n", dia, 0, 31);
+        break;
 
-            case  4 :
-            case  6 :
-            case  9 :
-            case 11 :
+    case 4:
+    case 6:
+    case 9:
+    case 11:
 
-                validarInt("Ingresar dia : \n", "Error ingresar dia valido. \n", dia, 0, 30);
-                break;
+        validarInt("Ingresar dia : \n", "Error ingresar dia valido. \n", dia, 0, 30);
+        break;
 
-            case  2 :
+    case 2:
 
-                validarInt("Ingresar dia : \n", "Error ingresar dia valido. \n", dia, 0, 28);
-                break;
-        }
-        validarInt("Ingresar anio : \n", "Error ingresar anio valido, 1900/2022 \n", anio, 1900, 2022);
-        printf("%d %d %d", *dia, *mes, *anio);
+        validarInt("Ingresar dia : \n", "Error ingresar dia valido. \n", dia, 0, 28);
+        break;
+    }
+    validarInt("Ingresar anio : \n", "Error ingresar anio valido, 1900/2022 \n", anio, 1900, 2022);
 }
-
-

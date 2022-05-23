@@ -11,12 +11,7 @@
 #ifndef LIBRARY_H_
 #define LIBRARY_H_
 
-
-
 #endif /* LIBRARY_H_ */
-
-
-
 
 /**
  * @brief pide y valida un dato de tipo string
@@ -39,7 +34,7 @@ int validarTexto(char *menInicio, char *menError, char *text, int len);
  * @param max tipo int, tamaño maximo del numero a verificar.
  * @return int retorna si la funcion se ejecuto correctamente
  */
-int validarFloat(char* menInicio, char* menError, float *number, int min, int max);
+int validarFloat(char *menInicio, char *menError, float *number, int min, int max);
 
 /**
  * @brief pide y valida un dato de tipo entero
@@ -51,10 +46,9 @@ int validarFloat(char* menInicio, char* menError, float *number, int min, int ma
  * @param max tipo int, tamaño maximo del numero a verificar.
  * @return int retorna si la funcion se ejecuto correctamente
  */
-int validarInt(char* menInicio, char* menError, int *number, int min, int max);
+int validarInt(char *menInicio, char *menError, int *number, int min, int max);
 
-
-int validarAlfaNumerico(char* menInicio, char* menError, char* texto, int max);
+int validarAlfaNumerico(char *menInicio, char *menError, char *texto, int max);
 
 /**
  * @brief saca el "\n" y lo reemplaza por un "\0"
@@ -65,7 +59,6 @@ int validarAlfaNumerico(char* menInicio, char* menError, char* texto, int max);
  */
 int limpiarBarraN(char vec[]);
 
-
 /**
  * @brief pasa a minuscula el array y luego modifica el indice 0 por una mayuscula
  *
@@ -74,5 +67,4 @@ int limpiarBarraN(char vec[]);
  */
 int ordenarStrings(char *array);
 
-void validarFecha(int* dia, int* mes, int* anio);
-
+void validarFecha(int *dia, int *mes, int *anio);

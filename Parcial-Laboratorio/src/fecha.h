@@ -8,10 +8,11 @@
 #ifndef FECHA_H_
 #define FECHA_H_
 
-typedef struct{
+typedef struct
+{
 	int dia;
 	int mes;
 	int anio;
-}eFecha;
+} eFecha;
 
 #endif /* FECHA_H_ */
